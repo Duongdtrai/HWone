@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var a = prompt('Mời bạn nhập giá trị a:');
+    var b = prompt('Mời bạn nhập giá trị b:');
+    var c = prompt('Mời bạn nhập giá trị c:');
+    var denta = b*b-4*a*c;
+    if(denta == 0){  
+        var ans = -b/(2*a);
+        document.write('<h2>Phương trình có một nghiệm duy nhất là: </h2>' + ans);
+    }
+    else if(denta < 0){
+        document.write('<h2>Phương trình có vô nghiệm</h2>');
+    }
+    else{
+        var x1 = (-b + Math.sqrt(denta))/(2*a);
+        var x2 = (-b - Math.sqrt(denta))/(2*a);
+        document.write(`<h2>Phương trình có nghiệm x1 là: ${x1}</h2>`);
+        document.write(`<h2>Phương trình có nghiệm x1 là: ${x2}</h2>`);
+    }
+</script>
+</html>
